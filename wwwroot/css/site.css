@@ -1,0 +1,230 @@
+/*#region global*/
+@font-face{
+    font-family: primaryFont;
+    src: url('../font/Aargh!\ W00\ Heavy.ttf');
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+* {
+    /* margin: 0 !important;
+    padding: 0 !important;*/
+
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/*VARIABLES*/
+
+:root { /*Custom variables to build design*/
+
+    /*global colors*/
+    --color-primary-black: #000000;
+    --color-primary-white: #ffffff;
+
+    /*NAVBAR*/
+    /*    --color-primary: #151313;*/
+    --color-navbar-text: #e8e8e8;
+    --color-navbar-togglerIcon: white;
+    --color-navbar-text-hover: #a6140a;
+    /**/
+
+
+
+
+}
+
+/*ENDVARIABLES*/
+
+/*#endregion*/
+
+/*#region navbar*/
+.navbarCustom { /*Custom properties of my navbar*/
+    /*background-color: var(--color-navbar);*/
+    background-color: transparent;
+    border: none !important;
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.logoDiv {
+    width: 22vh;
+    height: 8vh;
+    background-image: url(../img/nirvanalogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*#endregion*/
+
+
+/*Responsive options (testing)*/
+
+/*#region mobile*/
+@media (max-width: 576px) {
+
+    /*NAVBAR CONTENT, ICONS, ETC*/
+    .navbar-dark .navbar-toggler-icon { /*used to change the toggle icon color (only work if do this)*/
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+     }
+
+    .custom-toggler {
+        margin-right: 2.7vh;
+        border: none;
+        outline: none;
+    }
+
+    .offcanvas {
+        width: 70%;
+        background-color: var(--color-primary-black);
+
+    }
+
+    .offcanvas-body {
+        font-size: 1.5em;
+        justify-content: center;
+    }
+
+    .btn-close-arrow {
+        color: var(--color-primary-white);
+        font-size: 2.0em;
+        margin-right: 0.3em;
+        outline: none;
+    }
+
+
+    .navbarCustomLinks { 
+        color: var(--color-navbar-text) !important;
+        opacity: 0.7;
+    }
+
+    .navbarCustomLinks:hover {
+        color: var(--color-navbar-text-hover) !important;
+        opacity: 1.0;
+        font-size: 1.1em;
+    }
+    /**/
+
+
+    /*VIDEO AREA*/
+    .columnVideo {
+        height: 45vh;
+        background-color: var(--color-primary-black);
+        z-index: 99;
+    }
+    
+    .columnVideo video{
+        width: 100%;
+        height: 100%;
+    }
+    /**/
+
+
+    /*OUR TEAM*/
+    section#team{
+        height: 60vh;
+        width:100%;
+    }
+    section#team .row:first-child .col {
+         height: 20vh;
+         background-color: #fbbb24;
+   }
+    section#team .row:first-child .col > h1{
+        text-align: center;
+        font-family: primaryFont;
+        font-size: 2.7em;
+        color: var(--color-primary-black);
+    }
+
+
+    .carousel-image {
+        height: 30vh;
+        background-color: var(--color-primary-black);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .bg-img-1 {
+        background-image: url(../img/bandaopio1.jpg)
+    }
+    .bg-img-2 {
+        background-image: url(../img/bandaopio2.jpg)
+    }
+    .bg-img-3 {
+        background-image: url(../img/bandaopio4.png)
+    }
+    
+
+/*#endregion*/
+
+
+/*#region Tablets*/
+@media (min-width: 577px) and (max-width: 992px) {
+    .columnVideo {
+        height: 50vh; 
+        background-color: var(--color-navbar);
+    }
+}
+
+/*#endregion*/
+
+
+/*#region desktops and laptops*/
+@media (min-width: 993px) {
+
+    .columnVideo {
+        height: 100vh; 
+        background-color: var(--color-primary-black) !important;
+        display: flex;
+        /*align-items: center;*/
+        justify-content: center;
+    }
+
+    .navbarCustomLinks {/* Custom properties to "a" links.*/
+        color: var(--color-navbar-text) !important;
+        font-size: 1.3em;
+        transition: color 0.3s ease, font-size 0.3s ease;
+    }
+
+    .navbarCustomLinks:hover {
+        color: var(--color-navbar-text-hover) !important;
+        font-size: 1.4em;
+    }
+
+}
+
+}
+/*/*#endregion*/
